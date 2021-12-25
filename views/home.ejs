@@ -1,0 +1,40 @@
+<%- include("partials/header") -%>
+
+<h1>Home</h1>
+<p><%= startingContent %></p>
+<% console.log(newPosts) %>
+
+<%# newPost.forEach(post => console.log(post.titlePost)) %>
+<% newPosts.forEach(function(post) { %>
+
+<h1><%= post.titlePost %></h1>
+<p>
+<%= post.bodyPost.substring(0, 100) + " ..." %>
+<a href="/posts/<%= post.titlePost %>">Read More</a>
+</p>
+
+<% }) %>
+
+
+<%- include("partials/footer") -%>
+
+
+
+
+
+
+
+<!-- FOR LOOP CAN ALSO BE DONE IN THESE OLD SYNTAX -->
+
+<%# for(let i = 0; i<newPost.length; i++) { %>
+   <%#  console.log(newPost[i].titlePost) %>
+<%#  } %>
+
+<!-- OR -->
+
+<%# newPost.forEach(function(post) { %>
+    <%# console.log(post.titlePost) %>
+<%# }) %>
+
+<!-- OR -->
+
